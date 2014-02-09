@@ -1,11 +1,22 @@
-<h1>Listing Posts</h1>
-<table>
+<html>
+<head>
+<script type="text/JavaScript">
+<!--
+function timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
+//   -->
+</script>
+</head>
+<body onload="JavaScript:timedRefresh(5000);">
+
+<table border="1" width ="100%">
   <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th width="15%">Owner</th>
+    <th width="70%">Challenges</th>
+    <th width="5%"></th>
+    <th width="5%"></th>
+    <th width="5%"></th>
   </tr>
  
 <% @posts.each do |post| %>
@@ -19,3 +30,6 @@
   </tr>
 <% end %>
 </table>
+
+</body>
+</html>
