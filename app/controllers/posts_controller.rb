@@ -4,7 +4,7 @@ def new
 @post = Post.new
 end
 def index
-  @posts = Post.all
+  @posts = Post.order('created_at DESC').all
 end
 
 def create
