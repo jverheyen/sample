@@ -12,7 +12,8 @@ function timedRefresh(timeoutPeriod) {
 
 <table border="1" width ="100%">
   <tr>
-    <th width="15%">Owner</th>
+    <th width="5%">typeOfPost</th>
+    <th width="10%">Owner</th>
     <th width="70%">Challenges</th>
     <th width="5%"></th>
     <th width="5%"></th>
@@ -21,6 +22,7 @@ function timedRefresh(timeoutPeriod) {
  
 <% @posts.each do |post| %>
   <tr>
+    <td><%= post.typeOfPost %></td>
     <td><%= post.title %></td>
     <td><%= post.text %></td>
     <td><%= link_to 'Show', post_path(post) %></td>

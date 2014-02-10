@@ -24,7 +24,7 @@ def edit
 end
 def update
   @post = Post.find(params[:id])
-  if @post.update(params[:post].permit(:title, :text))
+  if @post.update(params[:post].permit(:title, :text, :typeOfPost))
     redirect_to @post
   else
     render 'edit'
@@ -38,6 +38,6 @@ def destroy
 end
 private
   def post_params
-    params.require(:post).permit(:title, :text)
+    params.require(:post).permit(:title, :text, :typeOfPost)
   end
 end

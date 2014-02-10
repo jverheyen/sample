@@ -16,10 +16,14 @@
   </p>
  
   <p>
-    <%= f.label :Challenge %><br>
+    <%= f.label :Post %><br>
     <%= f.text_area :text %>
+  
   </p>
- 
+    <b>challenge </b>	
+    <%= f.radio_button :typeOfPost, "0" %><BR>
+    <b>success </b>
+    <%= f.radio_button :typeOfPost, "1" %>
   <p>
     <%= f.submit %>
   </p>
