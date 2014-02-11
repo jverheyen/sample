@@ -4,9 +4,17 @@ def new
 @post = Post.new
 end
 def index
-  @posts = Post.order('created_at DESC').all
+  @posts = Post.order('created_at DESC').where.not(typeOfPost: 2)
 end
-
+def hidden
+  @posts = Post.order('created_at DESC').where(typeOfPost: 2)
+end
+def challenges
+  @posts = Post.order('created_at DESC').where(typeOfPost: 0)
+end
+def succeses
+  @posts = Post.order('created_at DESC').where(typeOfPost: 1)
+end
 def create
   @post = Post.new(post_params)
  if @post.save

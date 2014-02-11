@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/JavaScript">
+<!--
+function timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
+//   -->
+</script>
+</head>
+<body onload="JavaScript:timedRefresh(50000);">
+<table border="1" width ="100%" bgcolor=#D8F6CE >
+  <tr>
+    <th width="10%">Owner</th>
+    <th width="90%">Succes</th>
+  </tr>
+ 
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.title %></td>
+    <td><%= post.text %></td>
+  </tr>
+<% end %>
+</table>
+</body>
+</html>

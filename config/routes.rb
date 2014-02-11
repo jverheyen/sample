@@ -6,6 +6,10 @@ Sample::Application.routes.draw do
   # You can have the root of your site routed with "root"
     root 'welcome#index'
 
+get '/posts/hidden' => 'posts#hidden'
+get '/posts/challenges' => 'posts#challenges'
+get '/posts/succeses' => 'posts#succeses'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -27,7 +31,7 @@ end
   #       get 'sold'
   #     end
   #   end
-
+  
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
