@@ -3,7 +3,7 @@ table{
                 border-collapse:collapse;
         }
         td{         
-                padding:7px; border:#4e95f4 1px solid;
+                padding:7px; border:#000000 1px solid;
         }
         /* provide some minimal visual accomodation for IE8 and below */
         tr{
@@ -17,4 +17,7 @@ table{
         tr:nth-child(even){
                 background: #dae5f4;
         }
+body{
+background-color: black;
+}
 
