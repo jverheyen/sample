@@ -1,10 +1,8 @@
 Sample::Application.routes.draw do
-  get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-    root 'welcome#index'
 
 #get '/posts/hidden' => 'posts#hidden'
 #get '/posts/challenges' => 'posts#challenges'
@@ -18,9 +16,12 @@ Sample::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
 scope 'highscores' do
-get '/posts/hidden' => 'posts#hidden'
-get '/posts/challenges' => 'posts#challenges'
-get '/posts/succeses' => 'posts#succeses'
+
+  root 'welcome#index'
+  get "welcome/index"
+  get '/posts/hidden' => 'posts#hidden'
+  get '/posts/challenges' => 'posts#challenges'
+  get '/posts/succeses' => 'posts#succeses'
  
 
  resources :posts do
