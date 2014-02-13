@@ -6,7 +6,7 @@ Sample::Application.routes.draw do
 
 #get '/posts/hidden' => 'posts#hidden'
 #get '/posts/challenges' => 'posts#challenges'
-#get '/posts/succeses' => 'posts#succeses'
+#get '/posts/successes' => 'posts#successes'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -21,7 +21,7 @@ scope 'highscores' do
   get "welcome/index"
   get '/posts/hidden' => 'posts#hidden'
   get '/posts/challenges' => 'posts#challenges'
-  get '/posts/succeses' => 'posts#succeses'
+  get '/posts/successes' => 'posts#successes'
  
 
  resources :posts do

@@ -12,7 +12,7 @@ end
 def challenges
   @posts = Post.order('created_at DESC').where(typeOfPost: 0)
 end
-def succeses
+def successes
   @posts = Post.order('created_at DESC').where(typeOfPost: 1)
 end
 def create
