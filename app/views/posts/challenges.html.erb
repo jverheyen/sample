@@ -2,12 +2,20 @@
 <head>
 <META HTTP-EQUIV="refresh" CONTENT="50;URL=successes.html">
 <%= stylesheet_link_tag "challenges.css" %> 
+<script>
+function scroll(speed) {
+    $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, speed, function() {
+        $(this).animate({ scrollTop: 0 }, speed);
+    });
+}
+</script>
+
 </head>
 <body>
 <table border="1" width ="100%" bgcolor=#A9E2F3 >
   <tr>
-    <th width="10%">Owner</th>
-    <th width="90%">Challenge</th>
+    <th width="15%">Owner</th>
+    <th width="85%">Challenge</th>
   </tr>
  
 <% @posts.each do |post| %>
@@ -17,5 +25,10 @@
   </tr>
 <% end %>
 </table>
+<script>
+speed = 5000;
+scroll(speed)
+setInterval(function(){scroll(speed)}, speed * 2);
+</script>
 </body>
 </html>

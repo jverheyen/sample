@@ -1,0 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+table{
+                width:100%;
+                border-collapse:collapse;
+        }
+        td{         
+                padding:7px; border:#000000 1px solid;
+        }
+        /* provide some minimal visual accomodation for IE8 and below */
+        tr{
+                background: #b8d1f3;
+        }
+        /*  Define the background color for all the ODD background rows  */
+        tr:nth-child(odd){         
+                background: #b8d1f3;
+        }
+        /*  Define the background color for all the EVEN background rows  */
+        tr:nth-child(even){
+                background: #dae5f4;
+        }
+body{
+background-color: black;
+}
+
+body{
+background-color: white;
+}
+
+table{
+                width:100%;
+                border-collapse:collapse;
+        }
+        td{         
+                padding:7px; border:#000000 1px solid;
+        }
+        /* provide some minimal visual accomodation for IE8 and below */
+        tr{
+                background: #A3DB8D;
+        }
+        /*  Define the background color for all the ODD background rows  */
+        tr:nth-child(odd){         
+                background: #A3DB8D;
+        }
+        /*  Define the background color for all the EVEN background rows  */
+        tr:nth-child(even){
+                background: #D8F6CE;
+        }
+body{
+background-color: black;
+}
