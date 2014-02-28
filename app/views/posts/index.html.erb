@@ -12,9 +12,9 @@ function timedRefresh(timeoutPeriod) {
 <body onload="JavaScript:timedRefresh(50000);">
 <table width ="100%" >
   <tr>
-    <th width="5%">typeOfPost</th>
-    <th width="10%">Owner</th>
-    <th width="70%">Post</th>
+    <th width="5%"><%= sortable "typeOfPost" %></th>
+    <th width="10%"><%= sortable "title" %></th>
+    <th width="70%"><%= sortable "text" %></th>
     <th width="5%"></th>
     <th width="5%"></th>
     <th width="5%"></th>
