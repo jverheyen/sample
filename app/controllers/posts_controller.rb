@@ -6,6 +6,9 @@ end
 def index
   @posts = Post.order('created_at DESC').where.not(typeOfPost: 2)
 end
+def sortedIndex
+  @posts = Post.order(sort_column + " " + sort_direction)
+end
 def hidden
   @posts = Post.order('created_at DESC').where(typeOfPost: 2)
 end
@@ -48,4 +51,11 @@ private
   def post_params
     params.require(:post).permit(:title, :text, :typeOfPost)
   end
+  def sort_column
+    Post.column_names.include?(params[:sort]) ? params[:sort] : "typeOfPost"
+  end
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
+helper_method :sort_column, :sort_direction
 end

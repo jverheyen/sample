@@ -1,0 +1,36 @@
+<html>
+<head>
+<script type="text/JavaScript">
+<!--
+function timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
+//   -->
+</script>
+
+</head>
+<body onload="JavaScript:timedRefresh(50000);">
+<table width ="100%" >
+  <tr>
+    <th width="5%"><%= sortable "typeOfPost" %></th>
+    <th width="10%"><%= sortable "title" %></th>
+    <th width="70%"><%= sortable "text" %></th>
+    <th width="5%"></th>
+    <th width="5%"></th>
+    <th width="5%"></th>
+  </tr>
+ 
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.typeOfPost %></td>
+    <td><%= post.title %></td>
+    <td><%= post.text %></td>
+    <td><%= link_to 'Show', post_path(post) %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post_path(post),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+</body>
+</html>

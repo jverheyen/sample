@@ -22,7 +22,7 @@ scope 'highscores' do
   get '/posts/hidden' => 'posts#hidden'
   get '/posts/challenges' => 'posts#challenges'
   get '/posts/successes' => 'posts#successes'
- 
+  get '/posts/sortedIndex' => 'posts#sortedIndex' 
 
  resources :posts do
     resources :comments
